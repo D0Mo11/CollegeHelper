@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/courseOverviewFragment">
+
+    <fragment
+        tools:layout="@layout/fragment_add_new_course"
+        android:id="@+id/addNewCourseFragment"
+        android:name="hr.domagoj.dragic99.collegehelper.ui.add_new_course.AddNewCourseFragment"
+        android:label="AddNewCourseFragment" >
+        <action
+            android:id="@+id/action_addNewCourseFragment_to_courseOverviewFragment"
+            app:destination="@id/courseOverviewFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_course_overview"
+        android:id="@+id/courseOverviewFragment"
+        android:name="hr.domagoj.dragic99.collegehelper.ui.course_overview.CourseOverviewFragment"
+        android:label="CourseOverviewFragment" >
+        <action
+            android:id="@+id/action_courseOverviewFragment_to_addNewCourseFragment"
+            app:destination="@id/addNewCourseFragment" />
+    </fragment>
+</navigation>
