@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CollegeHelper</string>
+    <string name="courses">Predmeti:</string>
+    <string name="btnAddCourse">DODAJ PREDMET</string>
+    <string name="hint_course_name_input">Unesi naziv predmeta*</string>
+    <string name="hint_course_lecturer_input">Unesi predavača*</string>
+    <string name="hint_course_num_of_absence_input">Unesi maksimalni broj izostanaka*</string>
+    <string name="hint_course_additional_notes_input">Unesi dodatne bilješke</string>
+    <string name="Required">* - Obavezno</string>
 </resources>
