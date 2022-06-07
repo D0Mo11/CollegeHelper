@@ -22,5 +22,17 @@
         <action
             android:id="@+id/action_courseOverviewFragment_to_addNewCourseFragment"
             app:destination="@id/addNewCourseFragment" />
+        <action
+            android:id="@+id/action_courseOverviewFragment_to_courseDetailsFragment"
+            app:destination="@id/courseDetailsFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_course_details"
+        android:id="@+id/courseDetailsFragment"
+        android:name="hr.domagoj.dragic99.collegehelper.ui.course_details.CourseDetailsFragment"
+        android:label="CourseDetailsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
     </fragment>
 </navigation>

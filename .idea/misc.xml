@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Korisnik/Desktop/CollegeHelper/app/src/main/res/drawable/border.xml" value="0.164" />
         <entry key="..\:/Users/Korisnik/Desktop/CollegeHelper/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Korisnik/Desktop/CollegeHelper/app/src/main/res/layout/fragment_add_new_course.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Korisnik/Desktop/CollegeHelper/app/src/main/res/layout/fragment_course_details.xml" value="0.24048913043478262" />
         <entry key="..\:/Users/Korisnik/Desktop/CollegeHelper/app/src/main/res/layout/fragment_course_overview.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Korisnik/Desktop/CollegeHelper/app/src/main/res/layout/item_course.xml" value="0.264" />
       </map>
     </option>
   </component>
