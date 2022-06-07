@@ -47,7 +47,8 @@
             android:id="@+id/et_course_num_of_absence_input"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/hint_course_num_of_absence_input" />
+            android:hint="@string/hint_course_num_of_absence_input"
+            android:inputType="number"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
