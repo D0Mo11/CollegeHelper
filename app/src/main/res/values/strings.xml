@@ -8,4 +8,11 @@
     <string name="hint_course_additional_notes_input">Unesi dodatne bilješke</string>
     <string name="Required">* - Obavezno</string>
     <string name="slash">/</string>
+    <string name="lecturer">Predavač:</string>
+    <string name="additional_notes">Dodatne bilješke:</string>
+    <string name="absences">Izostanci:</string>
+    <string name="btnAddAbsence">Dodaj izostanak</string>
+    <string name="label_no_course">Sorry, no such course exists.</string>
+    <string name="dateOfAbsence">Datum izostanka:</string>
+    <string name="numOfAbsences">Broj sati izostanaka</string>
 </resources>

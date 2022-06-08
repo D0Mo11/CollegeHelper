@@ -26,7 +26,8 @@ class CourseOverviewAdapter: RecyclerView.Adapter<CourseOverviewViewHolder>() {
         val course = courses[position]
         holder.bind(course)
         onCourseSelectedListener?.let { listener ->
-            holder.itemView.setOnClickListener{ listener.onCourseSelected(course.id)}
+            holder.itemView.setOnClickListener{ listener.onCourseSelected(course.id) }
+            holder.itemView.setOnLongClickListener { listener.onCourseLongPress(course) }
         }
     }
 

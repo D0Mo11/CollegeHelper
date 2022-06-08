@@ -33,7 +33,7 @@
         android:paddingEnd="10dp"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintEnd_toStartOf="@id/tvSlash"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:text="@string/slash"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/tvCurrentNumOfAbsence"
+        app:layout_constraintEnd_toStartOf="@id/tvNumOfAbsence"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -58,17 +58,8 @@
         android:paddingEnd="10dp"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/tvSlash"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:id="@+id/ivDelete"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_gravity="center_vertical|end"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

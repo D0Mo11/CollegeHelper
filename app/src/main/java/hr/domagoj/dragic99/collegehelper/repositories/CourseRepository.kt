@@ -14,5 +14,12 @@ class CourseRepository(private val courseDao: CourseDao) {
         return courseDao.readAllData()
     }
 
+    fun getCourseById(id: Int): Course?{
+        return courseDao.getCourseById(id)
+    }
+
+    fun delete(course: Course){
+        return courseDao.delete(course)
+    }
 
 }

@@ -1,10 +1,7 @@
 package hr.domagoj.dragic99.collegehelper.room
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import hr.domagoj.dragic99.collegehelper.model.Course
 import java.util.concurrent.Flow
 
@@ -16,5 +13,11 @@ interface CourseDao {
 
     @Query("SELECT * FROM course_table")
     fun readAllData() : LiveData<List<Course>>
+
+    @Query("SELECT * FROM course_table WHERE id=:id")
+    fun getCourseById(id: Int): Course?
+
+    @Delete
+    fun delete(course: Course)
 
 }

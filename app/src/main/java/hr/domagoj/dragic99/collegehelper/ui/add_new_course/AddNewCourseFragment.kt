@@ -12,7 +12,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AddNewCourseFragment : Fragment() {
 
-    lateinit var binding: FragmentAddNewCourseBinding
+    private lateinit var binding: FragmentAddNewCourseBinding
     private val addNewCourseViewModel: AddNewCourseViewModel by viewModel()
 
     override fun onCreateView(
