@@ -6,7 +6,7 @@ import hr.domagoj.dragic99.collegehelper.databinding.ItemCourseBinding
 import hr.domagoj.dragic99.collegehelper.model.Course
 
 
-class CourseOverviewViewHolder(itemView: View, ): RecyclerView.ViewHolder(itemView) {
+class CourseOverviewViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     fun bind(course: Course){
         val binding = ItemCourseBinding.bind(itemView)

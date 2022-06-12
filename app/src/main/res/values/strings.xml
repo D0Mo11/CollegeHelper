@@ -15,4 +15,5 @@
     <string name="label_no_course">Sorry, no such course exists.</string>
     <string name="dateOfAbsence">Datum izostanka:</string>
     <string name="numOfAbsences">Broj sati izostanaka</string>
+    <string name="currentNumOfAbsences">Trenutno izostanaka:</string>
 </resources>

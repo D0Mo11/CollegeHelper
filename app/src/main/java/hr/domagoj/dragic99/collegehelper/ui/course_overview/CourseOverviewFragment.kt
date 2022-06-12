@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import hr.domagoj.dragic99.collegehelper.databinding.FragmentCourseOverviewBinding
 import hr.domagoj.dragic99.collegehelper.model.Course
+import kotlinx.coroutines.awaitAll
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CourseOverviewFragment : Fragment(), OnCourseEventListener {
@@ -43,7 +44,7 @@ class CourseOverviewFragment : Fragment(), OnCourseEventListener {
             LinearLayoutManager.VERTICAL,
             false
         )
-        adapter= CourseOverviewAdapter()
+        adapter = CourseOverviewAdapter()
         adapter.onCourseSelectedListener = this
         binding.rvCoursesList.adapter = adapter
     }
@@ -60,7 +61,8 @@ class CourseOverviewFragment : Fragment(), OnCourseEventListener {
 
     override fun onCourseLongPress(course: Course?): Boolean {
         course?.let { it ->
-            courseOverviewViewModel.delete(it)
+            courseOverviewViewModel.deleteCourse(it)
+            courseOverviewViewModel.deleteAllAbsenceFromCourse(it.courseName)
         }
         return true
     }

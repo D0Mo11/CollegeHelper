@@ -1,7 +1,9 @@
 package hr.domagoj.dragic99.collegehelper.ui.course_overview
 
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import hr.domagoj.dragic99.collegehelper.model.Absence
 import hr.domagoj.dragic99.collegehelper.model.Course
 import hr.domagoj.dragic99.collegehelper.repositories.CourseRepository
 
@@ -9,7 +11,12 @@ class CourseOverviewViewModel(private val courseRepository: CourseRepository) : 
 
     val courses = courseRepository.readAllData()
 
-    fun delete(course: Course){
-        courseRepository.delete(course)
+    fun deleteCourse(course: Course){
+        courseRepository.deleteCourse(course)
     }
+
+    fun deleteAllAbsenceFromCourse(courseName: String){
+        courseRepository.deleteAllAbsenceFromCourse(courseName)
+    }
+
 }
