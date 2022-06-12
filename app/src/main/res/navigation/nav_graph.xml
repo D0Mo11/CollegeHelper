@@ -34,5 +34,23 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_courseDetailsFragment_to_addNewAbsenceFragment"
+            app:destination="@id/addNewAbsenceFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_add_new_absence"
+        android:id="@+id/addNewAbsenceFragment"
+        android:name="hr.domagoj.dragic99.collegehelper.ui.add_new_absence.AddNewAbsenceFragment"
+        android:label="AddNewAbsenceFragment" >
+        <action
+            android:id="@+id/action_addNewAbsenceFragment_to_courseDetailsFragment"
+            app:destination="@id/courseDetailsFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="courseName"
+            app:argType="string" />
     </fragment>
 </navigation>

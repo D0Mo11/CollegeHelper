@@ -4,6 +4,8 @@ import androidx.room.Room
 import hr.domagoj.dragic99.collegehelper.ui.add_new_course.AddNewCourseViewModel
 import hr.domagoj.dragic99.collegehelper.repositories.CourseRepository
 import hr.domagoj.dragic99.collegehelper.room.CourseDatabase
+import hr.domagoj.dragic99.collegehelper.ui.add_new_absence.AddNewAbsenceViewModel
+import hr.domagoj.dragic99.collegehelper.ui.course_details.CourseDetailsViewModel
 import hr.domagoj.dragic99.collegehelper.ui.course_overview.CourseOverviewViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -16,7 +18,7 @@ val roomModule = module {
             androidApplication(),
             CourseDatabase::class.java,
             "course_database"
-        ).build()
+        ).allowMainThreadQueries().build()
     }
     single { get<CourseDatabase>().courseDao() }
 }
@@ -25,6 +27,8 @@ val viewModelModule = module {
 
     viewModel { AddNewCourseViewModel(get()) }
     viewModel { CourseOverviewViewModel(get()) }
+    viewModel { CourseDetailsViewModel(get()) }
+    viewModel { AddNewAbsenceViewModel(get()) }
 }
 
 val repositoryModule = module {

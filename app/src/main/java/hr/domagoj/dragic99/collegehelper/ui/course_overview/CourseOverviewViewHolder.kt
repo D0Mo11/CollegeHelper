@@ -14,5 +14,4 @@ class CourseOverviewViewHolder(itemView: View): RecyclerView.ViewHolder(itemView
         binding.tvCurrentNumOfAbsence.text = course.courseCurrentNumOfAbsence.toString()
         binding.tvNumOfAbsence.text = course.courseMaxAbsence
     }
-
 }
