@@ -37,6 +37,9 @@
         <action
             android:id="@+id/action_courseDetailsFragment_to_addNewAbsenceFragment"
             app:destination="@id/addNewAbsenceFragment" />
+        <action
+            android:id="@+id/action_courseDetailsFragment_to_courseOverviewFragment"
+            app:destination="@id/courseOverviewFragment" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_add_new_absence"

@@ -7,7 +7,7 @@ import hr.domagoj.dragic99.collegehelper.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext
 
-class CollegeHelperApp: Application() {
+class CollegeHelperApp : Application() {
     override fun onCreate() {
         super.onCreate()
         GlobalContext.startKoin {

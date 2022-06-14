@@ -1,10 +1,7 @@
 package hr.domagoj.dragic99.collegehelper.ui.course_details
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -33,6 +30,7 @@ class CourseDetailsFragment : Fragment(), OnAbsenceEventListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
         val course = courseDetailsViewModel.getCourseById(args.id)
         setupRecycler()
         displayCourseInfo(course)
@@ -42,7 +40,7 @@ class CourseDetailsFragment : Fragment(), OnAbsenceEventListener {
             if (it != null && it.isNotEmpty()) {
                 adapter.setAbsences(it)
                 val updatedNumOfAbsences = adapter.itemCount
-                if(updatedNumOfAbsences == 0) binding.tvCurrentNumOfAbsence.text = "0"
+                if (updatedNumOfAbsences == 0) binding.tvCurrentNumOfAbsence.text = "0"
                 else binding.tvCurrentNumOfAbsence.text = updatedNumOfAbsences.toString()
                 courseDetailsViewModel.updateCurrentNumberOfAbsences(
                     updatedNumOfAbsences,
@@ -52,6 +50,22 @@ class CourseDetailsFragment : Fragment(), OnAbsenceEventListener {
         }
         binding.btnAddAbsence.setOnClickListener { addAbsence(args.id, courseName) }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_course_details, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_back -> {
+                val action =
+                    CourseDetailsFragmentDirections.actionCourseDetailsFragmentToCourseOverviewFragment()
+                findNavController().navigate(action)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun setupRecycler() {

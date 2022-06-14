@@ -8,7 +8,7 @@ import hr.domagoj.dragic99.collegehelper.model.Course
 
 @Database(entities = [Course::class, Absence::class], version = 1, exportSchema = false)
 @TypeConverters(hr.domagoj.dragic99.collegehelper.room.TypeConverters::class)
-abstract class CourseDatabase : RoomDatabase(){
+abstract class CourseDatabase : RoomDatabase() {
 
     abstract fun courseDao(): CourseDao
 }

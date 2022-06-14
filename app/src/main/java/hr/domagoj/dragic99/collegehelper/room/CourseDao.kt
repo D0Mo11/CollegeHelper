@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import hr.domagoj.dragic99.collegehelper.model.Absence
 import hr.domagoj.dragic99.collegehelper.model.Course
-import java.util.concurrent.Flow
 
 @Dao
 interface CourseDao {

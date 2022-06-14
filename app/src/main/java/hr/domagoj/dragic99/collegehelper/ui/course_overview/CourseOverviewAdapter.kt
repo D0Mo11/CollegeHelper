@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import hr.domagoj.dragic99.collegehelper.R
 import hr.domagoj.dragic99.collegehelper.model.Course
 
-class CourseOverviewAdapter: RecyclerView.Adapter<CourseOverviewViewHolder>() {
+class CourseOverviewAdapter : RecyclerView.Adapter<CourseOverviewViewHolder>() {
 
     private val courses = mutableListOf<Course>()
     var onCourseSelectedListener: OnCourseEventListener? = null
 
-    fun setCourses(courses : List<Course>){
+    fun setCourses(courses: List<Course>) {
         this.courses.clear()
         this.courses.addAll(courses)
         this.notifyDataSetChanged()
@@ -26,7 +26,7 @@ class CourseOverviewAdapter: RecyclerView.Adapter<CourseOverviewViewHolder>() {
         val course = courses[position]
         holder.bind(course)
         onCourseSelectedListener?.let { listener ->
-            holder.itemView.setOnClickListener{ listener.onCourseSelected(course.id) }
+            holder.itemView.setOnClickListener { listener.onCourseSelected(course.id) }
             holder.itemView.setOnLongClickListener { listener.onCourseLongPress(course) }
         }
     }
