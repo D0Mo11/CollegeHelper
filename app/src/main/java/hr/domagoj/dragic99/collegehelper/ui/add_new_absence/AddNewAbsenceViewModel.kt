@@ -11,24 +11,24 @@ import kotlinx.coroutines.launch
 
 class AddNewAbsenceViewModel(private val courseRepository: CourseRepository) : ViewModel() {
 
-    private val _numOfAbsences : MutableLiveData<Int> = MutableLiveData<Int>(1)
+    private val _numOfAbsences: MutableLiveData<Int> = MutableLiveData<Int>(1)
     val numOfAbsences: LiveData<Int> = _numOfAbsences
 
-    fun insertAbsence(absence: Absence){
+    fun insertAbsence(absence: Absence) {
         viewModelScope.launch(Dispatchers.IO) {
             courseRepository.insertAbsence(absence)
         }
     }
 
-    fun addNumOfAbsences(){
+    fun addNumOfAbsences() {
         _numOfAbsences.value?.let { _numOfAbsences.postValue(it + 1) }
     }
 
-    fun subtractNumOfAbsences(){
+    fun subtractNumOfAbsences() {
         _numOfAbsences.value?.let { _numOfAbsences.postValue(it - 1) }
     }
 
-    fun returnNumOfAbsencesToOne(){
+    fun returnNumOfAbsencesToOne() {
         _numOfAbsences.value?.let { _numOfAbsences.postValue(1) }
     }
 }

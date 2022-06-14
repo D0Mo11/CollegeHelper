@@ -9,12 +9,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import hr.domagoj.dragic99.collegehelper.databinding.FragmentCourseOverviewBinding
 import hr.domagoj.dragic99.collegehelper.model.Course
-import kotlinx.coroutines.awaitAll
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CourseOverviewFragment : Fragment(), OnCourseEventListener {
 
-    private lateinit var binding : FragmentCourseOverviewBinding
+    private lateinit var binding: FragmentCourseOverviewBinding
     private lateinit var adapter: CourseOverviewAdapter
     private val courseOverviewViewModel: CourseOverviewViewModel by viewModel()
 
@@ -29,10 +28,10 @@ class CourseOverviewFragment : Fragment(), OnCourseEventListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnAddCourse.setOnClickListener{ addCourse()}
+        binding.btnAddCourse.setOnClickListener { addCourse() }
         setupRecycler()
-        courseOverviewViewModel.courses.observe(viewLifecycleOwner){
-            if(it!=null && it.isNotEmpty()){
+        courseOverviewViewModel.courses.observe(viewLifecycleOwner) {
+            if (it != null && it.isNotEmpty()) {
                 adapter.setCourses(it)
             }
         }
@@ -50,12 +49,16 @@ class CourseOverviewFragment : Fragment(), OnCourseEventListener {
     }
 
     private fun addCourse() {
-        val action = CourseOverviewFragmentDirections.actionCourseOverviewFragmentToAddNewCourseFragment()
+        val action =
+            CourseOverviewFragmentDirections.actionCourseOverviewFragmentToAddNewCourseFragment()
         findNavController().navigate(action)
     }
 
     override fun onCourseSelected(id: Int?) {
-        val action = CourseOverviewFragmentDirections.actionCourseOverviewFragmentToCourseDetailsFragment(id?: -1)
+        val action =
+            CourseOverviewFragmentDirections.actionCourseOverviewFragmentToCourseDetailsFragment(
+                id ?: -1
+            )
         findNavController().navigate(action)
     }
 

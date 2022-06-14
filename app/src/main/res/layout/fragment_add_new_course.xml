@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/hint_course_num_of_absence_input"
-            android:inputType="number"/>
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -75,8 +75,8 @@
         android:text="@string/Required"
         android:textColor="@color/red"
         android:textSize="11sp"
-        app:layout_constraintTop_toBottomOf="@id/til_course_additional_notes_input"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_course_additional_notes_input" />
 
     <Button
         android:id="@+id/btnAddCourse"

@@ -5,9 +5,9 @@ import androidx.room.PrimaryKey
 import java.util.*
 
 @Entity(tableName = "absence_table")
-data class Absence (
+data class Absence(
     @PrimaryKey(autoGenerate = true)
-    val id : Int,
-    val courseName : String,
-    val absenceDate : Date
+    val id: Int,
+    val courseName: String,
+    val absenceDate: Date
 )

@@ -16,4 +16,6 @@
     <string name="dateOfAbsence">Datum izostanka:</string>
     <string name="numOfAbsences">Broj sati izostanaka</string>
     <string name="currentNumOfAbsences">Trenutno izostanaka:</string>
+    <string name="required_text">Popunite sva polja koja imaju *</string>
+    <string name="back">back_arrow</string>
 </resources>
